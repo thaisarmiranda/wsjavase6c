@@ -1,0 +1,31 @@
+package br.com.falhas.implementacao;
+
+public class TesteFalhas {
+
+	public static void main(String[] args) {
+		String palavra = "oi";
+		try {                                         // coloca dentro do TRY as linhas que você imagina que podem ter uma exceção/erro
+			int numero = Integer.parseInt("1");
+			System.out.println(numero);
+			
+			System.out.println(palavra.length());
+			
+			int x[] = new int[2];
+			x[0] = 15;
+			x[1] = 98;
+			x[2] = 12;
+			
+		}catch(NumberFormatException e) {            // dentro do CATCH o que vai ser executado se a exceção do TRY acontecer, dentro do parâmetro define qual exceção quer capturar
+			System.out.println("Número inválido");
+		}catch(NullPointerException e) {      
+			System.out.println("Objeto nulo");
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Excedeu posição no vetor");
+		}catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+
+	}
+
+}

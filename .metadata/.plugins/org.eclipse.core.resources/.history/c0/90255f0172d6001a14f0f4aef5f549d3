@@ -1,0 +1,21 @@
+package br.com.colecoes.teste;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class TesteSet {
+
+	public static void main(String[] args) {
+		
+		Set lista = new HashSet();    // SET não permite elementos duplicados
+		lista.add("DBA");
+		lista.add("ESTAGIARIO");
+		lista.add("ANALISTA");
+		lista.add("DBA");
+		lista.add("DEV");
+		lista.add("CURIOSO");
+		System.out.println(lista);
+
+	}
+
+}

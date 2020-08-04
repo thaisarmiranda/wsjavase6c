@@ -1,0 +1,23 @@
+package br.com.universidade.teste;
+
+import br.com.universidade.modelo.Aluno;
+
+public class TesteAluno {
+
+	public static void main(String[] args) {
+		// Criar o objeto:
+		// Aluno objeto;
+		
+		// Instancia o objeto:		
+		Aluno objeto = new Aluno();
+		objeto.preencherNome("Thaisa");
+		System.out.println("Nome..: " + objeto.exibirNome());
+		
+		objeto.preencherEmail("thaisa.miranda@itau-unibanco.com.br");
+		System.out.println("E-mail: " + objeto.exibirEmail());
+		
+		objeto.preencherRm(987302033);
+		System.out.println("RM....: " + objeto.exibirRm());
+	}
+
+}

@@ -1,0 +1,25 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.modelo.Endereco;
+
+public class TesteEndereco {
+
+	public static void main(String[] args) {
+		
+		Endereco endereco = new Endereco(
+				JOptionPane.showInputDialog("Logradouro"),
+				JOptionPane.showInputDialog("Numero"),
+				JOptionPane.showInputDialog("Complemento"),
+				JOptionPane.showInputDialog("Bairro"),
+				JOptionPane.showInputDialog("Cidade"),
+				JOptionPane.showInputDialog("UF"),
+				JOptionPane.showInputDialog("CEP")
+				);
+		
+		System.out.println(endereco.getAll());
+
+	}
+
+}

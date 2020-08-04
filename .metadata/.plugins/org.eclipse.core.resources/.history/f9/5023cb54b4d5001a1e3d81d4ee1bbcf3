@@ -1,0 +1,52 @@
+package br.com.universidade.teste;
+
+import javax.swing.JOptionPane;
+
+import br.com.universidade.modelo.Aluno;
+import br.com.universidade.modelo.Endereco;
+import br.com.universidade.modelo.Professor;
+import br.com.universidade.tela.Magica;
+
+public class TestePessoa {
+
+	public static void main(String[] args) {
+				
+		if (JOptionPane.showInputDialog("Digite <A> para Aluno ou qualquer outra letra para Professor").toUpperCase().charAt(0)=='A') {
+			Aluno aluno = new Aluno(
+					Magica.t("Nome"),
+					new Endereco(
+							Magica.t("Logradouro"),
+							Magica.t("Número"),
+							Magica.t("Complemento"),
+							Magica.t("Bairro"),
+							Magica.t("Cidade"),
+							Magica.t("UF"),
+							Magica.t("CEP")
+							),
+					Magica.t("E-mail"),
+					Magica.i("RM")
+					);
+			
+		}else {
+			Professor professor = new Professor(
+					Magica.t("Nome"),
+					new Endereco(
+						Magica.t("Logradouro"),
+						Magica.t("Número"),
+						Magica.t("Complemento"),
+						Magica.t("Bairro"),
+						Magica.t("Cidade"),
+						Magica.t("UF"),
+						Magica.t("CEP")
+						),
+					Magica.t("Data de contratação"),
+					Magica.t("Titulação"),
+					Magica.f("Valor Hora")
+					);
+			
+			System.out.println();
+	}
+
+}
+	
+}

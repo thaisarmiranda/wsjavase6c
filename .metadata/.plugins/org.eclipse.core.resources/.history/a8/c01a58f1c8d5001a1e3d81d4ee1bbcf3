@@ -1,0 +1,24 @@
+package br.com.polimorfismo.interfaces;
+
+import br.com.polimorfismo.beans.Bacharelado;
+import br.com.polimorfismo.beans.Medio;
+import br.com.polimorfismo.beans.Tecnologo;
+import br.com.polimorfismo.beans.Formacao;
+
+public interface PadraoDuracao {
+	
+	public void definirDuracao() {
+		if (Formacao instanceof Medio) {
+			duracao=36;
+		} else if (Formacao instanceof Tecnologo) {
+			duracao=24;
+		} else if (Formacao instanceof Bacharelado){
+			if (descricao.toUpperCase().matches("ENGENHARIA")) {
+				duracao=60;
+			}else {
+				duracao=48;
+			}
+		}
+	}
+
+}

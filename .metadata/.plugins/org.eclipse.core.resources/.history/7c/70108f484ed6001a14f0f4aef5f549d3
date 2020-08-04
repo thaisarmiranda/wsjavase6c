@@ -1,0 +1,8 @@
+package br.com.polimorfismo.interfaces;
+
+public interface Padrao {
+
+	public boolean verificarDados();
+	
+	
+}

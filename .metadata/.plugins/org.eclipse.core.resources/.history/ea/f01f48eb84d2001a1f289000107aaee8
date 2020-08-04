@@ -1,0 +1,17 @@
+package br.com.universidade.teste;
+
+import br.com.universidade.modelo.Aluno;
+
+public class TesteAluno {
+
+	public static void main(String[] args) {
+		// Criar o objeto:
+		// Aluno objeto;
+		
+		// Instancia o objeto:		
+		Aluno objeto = new Aluno();
+		objeto.preencherNome("Thaisa");
+		System.out.println(objeto.exibirNome());
+	}
+
+}

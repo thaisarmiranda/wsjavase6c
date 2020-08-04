@@ -1,0 +1,33 @@
+package br.com.ecommerce.modelo;
+
+public class Produto {
+
+	private int id;
+	private String descricao;
+	private int qtde;
+	private float valorCompra;
+	private float valorVenda;
+	public float subtotalVendas;
+	
+	public void preencherTudo(int pId, String pDescricao, int pQtde, float pValorCompra, float pValorVenda) {
+		id = pId;
+		descricao = pDescricao;
+		qtde = pQtde;
+		valorCompra = pValorCompra;
+		valorVenda = pValorVenda;
+	}
+	
+	public String exibirTudo() {
+		return 
+				"ID..: " + id + "\n" + 
+				"Descrção: " + descricao + "\n" +
+				"Quantidade: " + qtde + "\n" +
+				"Valor de Compra: R$ " + valorCompra + "\n" +
+				"Valor de Venda: R$ " + valorVenda;
+	}
+	
+	public float exibirSubtotalVendas() {
+		return subtotalVendas = (valorVenda * qtde);
+	}
+	
+}

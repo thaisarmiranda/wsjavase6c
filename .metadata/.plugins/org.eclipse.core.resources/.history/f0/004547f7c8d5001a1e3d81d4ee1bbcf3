@@ -1,0 +1,43 @@
+package br.com.polimorfismo.beans;
+
+public class Bacharelado extends Formacao {
+	
+	private String projetoConclusao;
+	private int cargaHorariaEstagio;
+	
+	public String getAll() {
+		return
+				super.getAll() + "\n" +
+				"Projeto de Conclusão: " + projetoConclusao + "\n" +
+				"Carga Horária Estágio: " + cargaHorariaEstagio;
+				}
+	public void setAll(String descricao, int periodo, double mensalidade, int duracao, String projetoConclusao, int cargaHorariaEstagio) {
+		super.setAll(descricao, periodo, mensalidade, duracao);
+		this.projetoConclusao = projetoConclusao;
+		this.cargaHorariaEstagio = cargaHorariaEstagio;
+	}
+	public Bacharelado() {
+		super();
+	}
+	public Bacharelado(String descricao, int periodo, double mensalidade, int duracao, String projetoConclusao,
+			int cargaHorariaEstagio) {
+		super(descricao, periodo, mensalidade, duracao);
+		this.projetoConclusao = projetoConclusao;
+		this.cargaHorariaEstagio = cargaHorariaEstagio;
+	}
+	public String getProjetoConclusao() {
+		return projetoConclusao;
+	}
+	public void setProjetoConclusao(String projetoConclusao) {
+		this.projetoConclusao = projetoConclusao;
+	}
+	public int getCargaHorariaEstagio() {
+		return cargaHorariaEstagio;
+	}
+	public void setCargaHorariaEstagio(int cargaHorariaEstagio) {
+		this.cargaHorariaEstagio = cargaHorariaEstagio;
+	}
+	
+	
+
+}

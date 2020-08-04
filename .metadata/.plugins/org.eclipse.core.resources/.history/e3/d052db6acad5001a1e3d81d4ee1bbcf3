@@ -1,0 +1,25 @@
+package br.com.polimorfismo.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.polimorfismo.beans.Bacharelado;
+import br.com.polimorfismo.beans.Formacao;
+
+public class TesteFormacao {
+
+	public static void main(String[] args) {
+		
+		Formacao formacao;
+		
+		
+		if (JOptionPane.showInputDialog("Qual formação deseja cadastrar?\n <T> para Tecnologo\n <B> para Bacharelado\n <M> para Medio").toUpperCase().charAt(0)=='L') {
+			formacao = new Tecnologo(
+					Magica.t("Descrição"),
+					Magica.i("Periodo"),
+					Magica.d("Mensalidade"),
+					Magica.i("Duração"),
+					);
+
+	}
+
+}

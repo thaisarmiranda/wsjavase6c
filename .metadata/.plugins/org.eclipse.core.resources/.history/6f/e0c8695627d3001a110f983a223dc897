@@ -1,0 +1,110 @@
+package br.com.ecommerce.modelo;
+
+/*
+ * Padrão => DTO (TO ou Beans) => Data Transfer Object - é um Design Pattern
+ * Melhor forma para construir uma classe modelo:
+ * - Todo atributo DEVE ser private
+ * - Todo atributo DEVE possuir um método GET (output) e SET (input) - os métodos exibirTudo e preencherTudo não substituem os individuais
+ * - ????
+ */
+
+public class Produto {
+
+	private int id;
+	private String descricao;
+	private int qtde;
+	private float valorCompra;
+	private float valorVenda;
+
+	
+// Source => Generate Getters and Setters (forma rápida de incluir os métodos get-exibir e set-preencher)
+		
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;          // this => faz referencia a propria classe / this.id (atributo da classe) = id (metodo)
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao.toUpperCase();
+	}
+
+	public int getQtde() {
+		return qtde;
+	}
+
+	public void setQtde(int qtde) {
+		this.qtde = qtde;
+	}
+
+	public float getValorCompra() {
+		return valorCompra;
+	}
+
+	public void setValorCompra(float valorCompra) {
+		this.valorCompra = valorCompra;
+	}
+
+	public float getValorVenda() {
+		return valorVenda;
+	}
+
+	public void setValorVenda(float valorVenda) {
+		this.valorVenda = valorVenda;
+	}
+
+	public void setAll(int pId, String pDescricao, int pQtde, float pValorCompra, float pValorVenda) {
+		id = pId;
+		descricao = pDescricao;
+		qtde = pQtde;
+		valorCompra = pValorCompra;
+		valorVenda = pValorVenda;
+	}
+	
+	public String getAll() {
+		return 
+				"Descrição......: " + descricao + "\n" +
+				"Código.........: " + id + "\n" +
+				"Quantidade.....: " + qtde + "\n" +
+				"Valor de Compra: R$ " + valorCompra + "\n" +
+				"Valor de Venda.: R$ " + valorVenda;
+	}
+	
+	public float getSubtotalVendas() {
+		return valorVenda * qtde;
+	}
+	
+	public double getValorVista() {
+		return valorVenda * 0.9;
+	}
+	
+	public void setAjuste(float porcentagem) {
+		valorCompra = valorCompra + valorCompra * (porcentagem/100);
+		valorVenda = valorVenda - valorVenda * (porcentagem/100);		
+	}
+	
+	public double getValorVista(float porcentagem) {
+		return 
+	}
+	
+	public String avaliarEstoque() {
+		if (qtde>20) {
+			return ("Estoque Cheio");
+		}else if (qtde<10) {
+			return ("Estoque Vazio");
+		}else {
+			return ("Estoque Médio");
+		}
+	}
+	
+	public String getDescricaoSimples() {
+		return descricao.substring(0, descricao.indexOf(" "));
+	}
+}

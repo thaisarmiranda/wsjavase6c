@@ -1,0 +1,22 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.modelo.Produto;
+
+public class TesteProduto {
+
+	public static void main(String[] args) {
+		
+		Produto produto = new Produto();
+		produto.setDescricao(JOptionPane.showInputDialog("Descrição"));
+		produto.setId(Integer.parseInt(JOptionPane.showInputDialog("ID")));
+		produto.setQtde(Integer.parseInt(JOptionPane.showInputDialog("Quantidade")));
+		produto.setValorCompra(Float.parseFloat(JOptionPane.showInputDialog("Valor Compra")));
+		produto.setValorVenda(Float.parseFloat(JOptionPane.showInputDialog("Valor Venda")));
+		
+		System.out.println(produto.getAll());
+
+	}
+
+}
